@@ -11,23 +11,14 @@ import edu.wpi.first.math.MathUtil;
 import edu.wpi.first.units.Units;
 import edu.wpi.first.wpilibj.XboxController;
 import frc.robot.Constants.OIConstants;
-import frc.robot.commands.SetIntakeSpeeds;
 import frc.robot.commands.AutoFullSystemCommands.ReturnHomeAndIntakeInAuto;
 import frc.robot.commands.AutoFullSystemCommands.ShootNoteInAuto;
 import frc.robot.commands.AutoFullSystemCommands.ShootSubwooferInAuto;
 import frc.robot.commands.AutoFullSystemCommands.StopShooter;
-import frc.robot.commands.ClimberCommands.SetClimberDown;
-import frc.robot.commands.ClimberCommands.SetClimberUp;
-import frc.robot.commands.FullSystemCommandsTeleop.AdjustAndShootShortDistance;
-import frc.robot.commands.FullSystemCommandsTeleop.AdjustAndShootSubwoofer;
 import frc.robot.commands.FullSystemCommandsTeleop.AdjustSubwoofer;
-import frc.robot.commands.FullSystemCommandsTeleop.AdjustWristAndFeed;
 import frc.robot.commands.FullSystemCommandsTeleop.AutoAdjustWristWithIntake;
 import frc.robot.commands.FullSystemCommandsTeleop.LimelightDriveToTarget;
 import frc.robot.commands.FullSystemCommandsTeleop.PrintPose;
-import frc.robot.commands.FullSystemCommandsTeleop.ReturnHomeAndIntake;
-import frc.robot.commands.FullSystemCommandsTeleop.ReturnToHome;
-import frc.robot.commands.FullSystemCommandsTeleop.ScoreNoteAmp;
 import frc.robot.subsystems.Climber;
 import frc.robot.subsystems.DriveSubsystem;
 import frc.robot.subsystems.Intake;
@@ -35,7 +26,6 @@ import frc.robot.subsystems.Shooter;
 import frc.robot.subsystems.ShooterWrist;
 import frc.robot.subsystems.VisionSubsystem;
 import edu.wpi.first.wpilibj2.command.Command;
-import edu.wpi.first.wpilibj2.command.ParallelCommandGroup;
 import edu.wpi.first.wpilibj2.command.RunCommand;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
@@ -45,7 +35,6 @@ import org.littletonrobotics.junction.Logger;
 
 import com.pathplanner.lib.auto.AutoBuilder;
 import com.pathplanner.lib.auto.NamedCommands;
-import com.pathplanner.lib.path.PathPlannerPath;
 
 /*
  * This class is where the bulk of the robot should be declared.  Since Command-based is a
