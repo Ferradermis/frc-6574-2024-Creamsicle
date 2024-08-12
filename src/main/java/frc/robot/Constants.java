@@ -53,15 +53,15 @@ public final class Constants {
     public static final double kBackRightChassisAngularOffset = Math.PI / 2;
 
     // SPARK MAX CAN IDs
-    public static final int kFrontLeftDrivingCanId = 9;
-    public static final int kFrontRightDrivingCanId = 3;
-    public static final int kRearLeftDrivingCanId = 5;
-    public static final int kRearRightDrivingCanId = 7;
+    public static final int kFrontLeftDrivingCanId = 3;
+    public static final int kFrontRightDrivingCanId = 7;
+    public static final int kRearLeftDrivingCanId = 9;
+    public static final int kRearRightDrivingCanId = 5;
 
     public static final int kFrontLeftTurningCanId = 2;
-    public static final int kFrontRightTurningCanId = 4;
-    public static final int kRearLeftTurningCanId = 6;
-    public static final int kRearRightTurningCanId = 8;
+    public static final int kFrontRightTurningCanId = 6;
+    public static final int kRearLeftTurningCanId = 8;
+    public static final int kRearRightTurningCanId = 4;
 
     public static final int pigeonCanId = 10;
 
@@ -141,21 +141,22 @@ public final class Constants {
   //THE CAN IDS WILL BE FIXED YIPPEE!!!
   /*TODO: Use constants for positions and speeds
   * Do things neatly this time because this will probably be the project we copy off of next year
-  * TODO: All temporary values - update at some point
+  * TODO: All temporary values - update at some point - half updated as of 8/12
   */
   public static final class RobotConstants{
 
     //Intake Constants
-    public static final int kIntakeTransitionCANID = 11;
+    public static final int kIntakeTransitionCANID = 13;
 
-    public static final int intakeLeftCANID = 14;
-    public static final int intakeRightCANID = 15;
+    public static final int intakeLeftCANID = 12;
+    public static final int intakeRightCANID = 11;
 
     //Shooter Constants
-    public static final int shooterLeftCANID = 16;
-    public static final int shooterRightCANID = 17;
-    public static final int shooterWristCANID = 18;
-    public static final int shooterIntakeCANID = 13;
+    public static final int shooterLeftCANID = 15;
+    public static final int shooterRightCANID = 16;
+    public static final int shooterWristCANID = 14;
+    
+    public static final int shooterIntakeCANID = 23;
 
     //Climber Constants
     public static final int climberLeftCANID = 21;
