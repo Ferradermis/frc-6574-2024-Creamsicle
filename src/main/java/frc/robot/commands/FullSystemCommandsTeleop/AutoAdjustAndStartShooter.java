@@ -5,6 +5,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.RobotContainer;
 
+//TODO: Not in use atm
 public class AutoAdjustAndStartShooter extends Command{
     /** Creates a new AutoAdjustShooterWrist. */
   private double position;
@@ -20,14 +21,15 @@ public class AutoAdjustAndStartShooter extends Command{
   @Override
   public void initialize() {
     System.out.println("Beginning Auto Adjust");
-    SmartDashboard.putNumber("Shooter start", Timer.getFPGATimestamp());
+    //SmartDashboard.putNumber("Shooter start", Timer.getFPGATimestamp());
     RobotContainer.shooter.setShooterVelocityUsingMotionMagic(50);
   }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    position = RobotContainer.shooterW.limelightGetShooterAngle();
+    //position = RobotContainer.shooterW.limelightGetShooterAngle();
+    position = 0;
     RobotContainer.intake.setIntakeSpeed(0, -0.1, 0);
     RobotContainer.shooterW.setPosition(position);
     

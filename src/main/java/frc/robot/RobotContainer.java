@@ -17,8 +17,8 @@ import frc.robot.commands.AutoFullSystemCommands.ShootSubwooferInAuto;
 import frc.robot.commands.AutoFullSystemCommands.StopShooter;
 import frc.robot.commands.FullSystemCommandsTeleop.AdjustSubwoofer;
 import frc.robot.commands.FullSystemCommandsTeleop.AutoAdjustWristWithIntake;
-import frc.robot.commands.FullSystemCommandsTeleop.LimelightDriveToTarget;
 import frc.robot.commands.FullSystemCommandsTeleop.PrintPose;
+import frc.robot.commands.FullSystemCommandsTeleop.ReturnHomeAndIntake;
 import frc.robot.subsystems.DriveSubsystem;
 import frc.robot.subsystems.Intake;
 import frc.robot.subsystems.Shooter;
@@ -45,7 +45,7 @@ public class RobotContainer {
 
   // The robot's subsystems
   public static final DriveSubsystem m_robotDrive = new DriveSubsystem();
-  public static VisionSubsystem limelight = new VisionSubsystem(m_robotDrive);;
+  // public static VisionSubsystem limelight = new VisionSubsystem(m_robotDrive); - no limelight rn
   public static Shooter shooter = new Shooter();
   public static ShooterWrist shooterW = new ShooterWrist();
   public static Intake intake = new Intake();
@@ -63,8 +63,8 @@ public class RobotContainer {
    */
   public RobotContainer(boolean isSim) {
 
-    //Start the USB camera feed
-    CameraServer.startAutomaticCapture();
+    //Start the USB camera feed - no camera rn
+    //CameraServer.startAutomaticCapture();
 
     // Create the SysId routine
     routine = new SysIdRoutine(
@@ -139,7 +139,7 @@ public class RobotContainer {
     m_driverController.y().whileTrue(new RunCommand(() -> m_robotDrive.zeroHeading()));
     // m_driverController.a().onTrue(new LimelightDriveToTarget());
     // m_driverController.b().whileTrue(new AdjustAndShootSubwoofer());
-    // m_driverController.rightTrigger().onTrue(new ReturnHomeAndIntake());
+    m_driverController.rightTrigger().whileTrue(new ReturnHomeAndIntake());
     // m_driverController.rightBumper().whileTrue(new AdjustAndShootShortDistance());
     // m_driverController.rightBumper().whileFalse(new RunCommand(() -> shooter.setShooterSpeed(0), shooter));
     // // Turn these into actual commands eventually

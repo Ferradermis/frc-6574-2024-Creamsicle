@@ -58,17 +58,16 @@ public class VisionSubsystem {
     }
 
     public void periodic(){
-
-      SmartDashboard.putNumber("Limelight TX", LimelightHelpers.getTX("limelight"));
-      SmartDashboard.putNumber("Limelight TY", LimelightHelpers.getTY("limelight"));
-      SmartDashboard.putNumber("limelight distance", getDistanceToTarget());
-      ty = LimelightHelpers.getTY("limelight");
-      if (LimelightHelpers.getTV("limelight")) {
-        SmartDashboard.putString("Has Valid Target", "True");
-      }
-      else {
-        SmartDashboard.putString("Has Valid Target", "False");
-      }
+      // SmartDashboard.putNumber("Limelight TX", LimelightHelpers.getTX("limelight"));
+      // SmartDashboard.putNumber("Limelight TY", LimelightHelpers.getTY("limelight"));
+      // SmartDashboard.putNumber("limelight distance", getDistanceToTarget());
+      // ty = LimelightHelpers.getTY("limelight");
+      // if (LimelightHelpers.getTV("limelight")) {
+      //   SmartDashboard.putString("Has Valid Target", "True");
+      // }
+      // else {
+      //   SmartDashboard.putString("Has Valid Target", "False");
+      // }
       /*
         odometryWvision();
         //setDynamicVisionStdDevs();

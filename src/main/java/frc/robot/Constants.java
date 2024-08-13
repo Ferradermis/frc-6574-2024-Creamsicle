@@ -189,7 +189,7 @@ public final class Constants {
     public static final double kFreeSpeedRpm = 6784;
   }
 
-  // UPDATE SOON PLEASE AND THANK YOU ^-^
+  // Update when we put a limelight on the robot
   public static final class VisionConstants{
     public static final String tagLimelightName = "limelight-tags";
 

@@ -69,9 +69,9 @@ public class ShooterWrist extends SubsystemBase {
   @Override
 
   public void periodic() {
-    double position = limelightGetShooterAngle();
-    SmartDashboard.putNumber("limelight shooter", position);
-    SmartDashboard.putNumber("Wrist Encoder", shooterWristMotor.getEncoder().getPosition());
+    // double position = limelightGetShooterAngle();
+    // SmartDashboard.putNumber("limelight shooter", position);
+    // SmartDashboard.putNumber("Wrist Encoder", shooterWristMotor.getEncoder().getPosition());
   }
 
   public void setSpeed(double speed)
@@ -94,10 +94,10 @@ public class ShooterWrist extends SubsystemBase {
 
   // Method to adjust our shooter wrist angle based on distance from speaker
   // Returns the encoder value to set the position of the wrist
-  //TODO: Redo this equation
-  public double limelightGetShooterAngle() {
-    double distance = RobotContainer.limelight.getDistanceToTarget();
-    return (6.83518/(distance + 42.3178)) + 0.161171;
-  }
+  // //TODO: Redo this equation
+  // public double limelightGetShooterAngle() {
+  //   double distance = RobotContainer.limelight.getDistanceToTarget();
+  //   return (6.83518/(distance + 42.3178)) + 0.161171;
+  // }
 }
 

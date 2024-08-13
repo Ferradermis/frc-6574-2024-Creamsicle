@@ -2,6 +2,7 @@ package frc.robot.commands.FullSystemCommandsTeleop;
 import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.RobotContainer;
 
+//TODO: Not in use atm
 public class AutoAdjustShooterWrist extends Command{
   /** Creates a new AutoAdjustShooterWrist. */
   private double position;
@@ -22,7 +23,8 @@ public class AutoAdjustShooterWrist extends Command{
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    position = RobotContainer.shooterW.limelightGetShooterAngle();
+    //position = RobotContainer.shooterW.limelightGetShooterAngle();
+    position = 0;
     RobotContainer.shooterW.setPosition(position);
   }
 
