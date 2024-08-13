@@ -98,25 +98,25 @@ public class Shooter extends SubsystemBase {
     motionMagicConfigsBottomR.MotionMagicJerk = 0; 
     
     //actually the motors
-    kShooterTopLeft = new TalonFX(Constants.RobotConstants.shooterLeftCANID);
+    kShooterTopLeft = new TalonFX(Constants.RobotConstants.shooterTopLeftCANID);
     kShooterTopLeft.getConfigurator().apply(shooterVelocityFxConfigurationTopL);
     kShooterTopLeft.setNeutralMode(NeutralModeValue.Coast);
     kShooterTopLeft.getConfigurator().apply(currentLimitConfig.withStatorCurrentLimit(90));
     kShooterTopLeft.getConfigurator().apply(currentLimitConfig.withSupplyCurrentLimit(50));
 
-    kShooterBottomLeft = new TalonFX(Constants.RobotConstants.shooterLeftCANID);
+    kShooterBottomLeft = new TalonFX(Constants.RobotConstants.shooterBottomLeftCANID);
     kShooterBottomLeft.getConfigurator().apply(shooterVelocityFxConfigurationBottomL);
     kShooterBottomLeft.setNeutralMode(NeutralModeValue.Coast);
     kShooterBottomLeft.getConfigurator().apply(currentLimitConfig.withStatorCurrentLimit(90));
     kShooterBottomLeft.getConfigurator().apply(currentLimitConfig.withSupplyCurrentLimit(50));
 
-    kShooterTopRight = new TalonFX(Constants.RobotConstants.shooterRightCANID);
+    kShooterTopRight = new TalonFX(Constants.RobotConstants.shooterTopRightCANID);
     kShooterTopRight.getConfigurator().apply(shooterVelocityFxConfigurationTopR);
     kShooterTopRight.setNeutralMode(NeutralModeValue.Coast);
     kShooterTopRight.getConfigurator().apply(currentLimitConfig.withStatorCurrentLimit(90));
     kShooterTopRight.getConfigurator().apply(currentLimitConfig.withSupplyCurrentLimit(50));
     
-    kShooterBottomRight = new TalonFX(Constants.RobotConstants.shooterRightCANID);
+    kShooterBottomRight = new TalonFX(Constants.RobotConstants.shooterBottomRightCANID);
     kShooterBottomRight.getConfigurator().apply(shooterVelocityFxConfigurationBottomR);
     kShooterBottomRight.setNeutralMode(NeutralModeValue.Coast);
     kShooterBottomRight.getConfigurator().apply(currentLimitConfig.withStatorCurrentLimit(90));

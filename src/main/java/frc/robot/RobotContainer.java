@@ -19,7 +19,6 @@ import frc.robot.commands.FullSystemCommandsTeleop.AdjustSubwoofer;
 import frc.robot.commands.FullSystemCommandsTeleop.AutoAdjustWristWithIntake;
 import frc.robot.commands.FullSystemCommandsTeleop.LimelightDriveToTarget;
 import frc.robot.commands.FullSystemCommandsTeleop.PrintPose;
-import frc.robot.subsystems.Climber;
 import frc.robot.subsystems.DriveSubsystem;
 import frc.robot.subsystems.Intake;
 import frc.robot.subsystems.Shooter;
@@ -50,7 +49,7 @@ public class RobotContainer {
   public static Shooter shooter = new Shooter();
   public static ShooterWrist shooterW = new ShooterWrist();
   public static Intake intake = new Intake();
-  public static Climber climber = new Climber();
+  //public static Climber climber = new Climber();
   public static SysIdRoutine routine;
 
   // The driver's controller

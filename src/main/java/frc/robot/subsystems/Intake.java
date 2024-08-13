@@ -53,8 +53,8 @@ public class Intake extends SubsystemBase {
     kIntakeRollerTop.setPeriodicFramePeriod(PeriodicFrame.kStatus5, 1000);
     kIntakeRollerTop.setPeriodicFramePeriod(PeriodicFrame.kStatus6, 1000);
 
-    // m_ShooterIntakeLimitSwitch = kShooterIntake.getReverseLimitSwitch(SparkLimitSwitch.Type.kNormallyOpen);
-    // m_ShooterIntakeLimitSwitch.enableLimitSwitch(false);
+    m_ShooterIntakeLimitSwitch = kIntakeTransition.getReverseLimitSwitch(SparkLimitSwitch.Type.kNormallyOpen);
+    m_ShooterIntakeLimitSwitch.enableLimitSwitch(false);
     
   }
   @Override

@@ -146,21 +146,21 @@ public final class Constants {
   public static final class RobotConstants{
 
     //Intake Constants
+    public static final int intakeRightCANID = 11;
+    public static final int intakeLeftCANID = 12;
+
     public static final int kIntakeTransitionCANID = 13;
 
-    public static final int intakeLeftCANID = 12;
-    public static final int intakeRightCANID = 11;
-
     //Shooter Constants
-    public static final int shooterLeftCANID = 15;
-    public static final int shooterRightCANID = 16;
     public static final int shooterWristCANID = 14;
-    
-    public static final int shooterIntakeCANID = 23;
+    public static final int shooterTopLeftCANID = 15;
+    public static final int shooterTopRightCANID = 16;
+    public static final int shooterBottomRightCANID = 17;
+    public static final int shooterBottomLeftCANID = 18;
 
     //Climber Constants
-    public static final int climberLeftCANID = 21;
-    public static final int climberRightCANID = 22;
+    // public static final int climberLeftCANID = 21;
+    // public static final int climberRightCANID = 22;
 
     //Intake Speed Constants
     public static final double intakeSpeedshooter = .4;
