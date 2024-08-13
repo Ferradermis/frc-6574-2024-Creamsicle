@@ -11,7 +11,7 @@ public class AdjustAndShootShortDistance extends SequentialCommandGroup{
         // addCommands(new FooCommand(), new BarCommand());
         addCommands(
             //new AutoAdjustAndStartShooter(RobotContainer.shooterW.limelightGetShooterAngle()),
-            new SetIntakeSpeeds(0, -1, 1)
+            new ShootFromShortDistance()
         );
     }
 }

@@ -103,6 +103,7 @@ public class Shooter extends SubsystemBase {
     kShooterTopLeft.setNeutralMode(NeutralModeValue.Coast);
     kShooterTopLeft.getConfigurator().apply(currentLimitConfig.withStatorCurrentLimit(90));
     kShooterTopLeft.getConfigurator().apply(currentLimitConfig.withSupplyCurrentLimit(50));
+    kShooterTopLeft.setInverted(true);
 
     kShooterBottomLeft = new TalonFX(Constants.RobotConstants.shooterBottomLeftCANID);
     kShooterBottomLeft.getConfigurator().apply(shooterVelocityFxConfigurationBottomL);
@@ -121,6 +122,7 @@ public class Shooter extends SubsystemBase {
     kShooterBottomRight.setNeutralMode(NeutralModeValue.Coast);
     kShooterBottomRight.getConfigurator().apply(currentLimitConfig.withStatorCurrentLimit(90));
     kShooterBottomRight.getConfigurator().apply(currentLimitConfig.withSupplyCurrentLimit(50));
+    kShooterBottomRight.setInverted(true);
 
   }
 
