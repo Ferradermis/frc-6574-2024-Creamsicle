@@ -145,7 +145,7 @@ public class RobotContainer {
     // m_driverController.b().whileTrue(new AdjustAndShootSubwoofer());
     m_driverController.leftTrigger().whileTrue(new OutakeNote());
     m_driverController.rightTrigger().onTrue(new ReturnHomeAndIntake());
-    m_driverController.b().onTrue(new SetShooterWristPosition(2));
+    m_driverController.b().whileTrue(new SetShooterWristPosition(2));
     m_driverController.rightBumper().whileTrue(new AdjustAndShootShortDistance());
     m_driverController.rightBumper().whileFalse(new RunCommand(() -> shooter.setShooterSpeed(0), shooter));
     // // Turn these into actual commands eventually
@@ -167,7 +167,7 @@ public class RobotContainer {
 
     //Operator buttons
     //TODO: Rework operator buttons for this robot
-    m_operatorController.leftBumper().whileTrue(new RunCommand(() -> shooterW.shooterWristMotor.set(0.1), shooterW));
+    m_operatorController.leftBumper().whileTrue(new RunCommand(() -> shooterW.shooterWristMotor.set(0.2), shooterW));
     m_operatorController.leftBumper().whileFalse(new RunCommand(() -> shooterW.shooterWristMotor.stopMotor(), shooterW));
     m_operatorController.rightBumper().whileTrue(new RunCommand(() -> shooterW.shooterWristMotor.set(-0.1), shooterW));
     m_operatorController.rightBumper().whileFalse(new RunCommand(() -> shooterW.shooterWristMotor.stopMotor(), shooterW));

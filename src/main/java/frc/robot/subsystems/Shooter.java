@@ -11,6 +11,7 @@ import com.ctre.phoenix6.hardware.TalonFX;
 import com.ctre.phoenix6.signals.NeutralModeValue;
 
 import edu.wpi.first.wpilibj.Timer;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 
@@ -101,27 +102,19 @@ public class Shooter extends SubsystemBase {
     kShooterTopLeft = new TalonFX(Constants.RobotConstants.shooterTopLeftCANID);
     kShooterTopLeft.getConfigurator().apply(shooterVelocityFxConfigurationTopL);
     kShooterTopLeft.setNeutralMode(NeutralModeValue.Coast);
-    kShooterTopLeft.getConfigurator().apply(currentLimitConfig.withStatorCurrentLimit(90));
-    kShooterTopLeft.getConfigurator().apply(currentLimitConfig.withSupplyCurrentLimit(50));
     kShooterTopLeft.setInverted(true);
 
     kShooterBottomLeft = new TalonFX(Constants.RobotConstants.shooterBottomLeftCANID);
     kShooterBottomLeft.getConfigurator().apply(shooterVelocityFxConfigurationBottomL);
     kShooterBottomLeft.setNeutralMode(NeutralModeValue.Coast);
-    kShooterBottomLeft.getConfigurator().apply(currentLimitConfig.withStatorCurrentLimit(90));
-    kShooterBottomLeft.getConfigurator().apply(currentLimitConfig.withSupplyCurrentLimit(50));
 
     kShooterTopRight = new TalonFX(Constants.RobotConstants.shooterTopRightCANID);
     kShooterTopRight.getConfigurator().apply(shooterVelocityFxConfigurationTopR);
     kShooterTopRight.setNeutralMode(NeutralModeValue.Coast);
-    kShooterTopRight.getConfigurator().apply(currentLimitConfig.withStatorCurrentLimit(90));
-    kShooterTopRight.getConfigurator().apply(currentLimitConfig.withSupplyCurrentLimit(50));
     
     kShooterBottomRight = new TalonFX(Constants.RobotConstants.shooterBottomRightCANID);
     kShooterBottomRight.getConfigurator().apply(shooterVelocityFxConfigurationBottomR);
     kShooterBottomRight.setNeutralMode(NeutralModeValue.Coast);
-    kShooterBottomRight.getConfigurator().apply(currentLimitConfig.withStatorCurrentLimit(90));
-    kShooterBottomRight.getConfigurator().apply(currentLimitConfig.withSupplyCurrentLimit(50));
     kShooterBottomRight.setInverted(true);
 
   }
@@ -129,6 +122,7 @@ public class Shooter extends SubsystemBase {
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
+    SmartDashboard.putNumber("Velocity", getVelocity());
   }
 
   public void setShooterSpeed(double speed) {
