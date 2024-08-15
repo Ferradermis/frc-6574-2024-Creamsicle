@@ -89,13 +89,13 @@ public class Shooter extends SubsystemBase {
     var motionMagicConfigsBottomL = shooterVelocityFxConfigurationBottomL.MotionMagic;
     var motionMagicConfigsTopR = shooterVelocityFxConfigurationTopR.MotionMagic;
     var motionMagicConfigsBottomR = shooterVelocityFxConfigurationBottomR.MotionMagic;
-    motionMagicConfigsTopL.MotionMagicAcceleration = 400; // Target acceleration of 400 rps/s (0.25 seconds to max)
+    motionMagicConfigsTopL.MotionMagicAcceleration = 800; // Target acceleration of 400 rps/s (0.25 seconds to max)
     motionMagicConfigsTopL.MotionMagicJerk = 0; //16000 
-    motionMagicConfigsBottomL.MotionMagicAcceleration = 400; // Target acceleration of 400 rps/s (0.25 seconds to max)
+    motionMagicConfigsBottomL.MotionMagicAcceleration = 800; // Target acceleration of 400 rps/s (0.25 seconds to max)
     motionMagicConfigsBottomL.MotionMagicJerk = 0; //16000 
-    motionMagicConfigsTopR.MotionMagicAcceleration = 400; // Target acceleration of 400 rps/s (0.25 seconds to max)
+    motionMagicConfigsTopR.MotionMagicAcceleration = 800; // Target acceleration of 400 rps/s (0.25 seconds to max)
     motionMagicConfigsTopR.MotionMagicJerk = 0; 
-    motionMagicConfigsBottomR.MotionMagicAcceleration = 400; // Target acceleration of 400 rps/s (0.25 seconds to max)
+    motionMagicConfigsBottomR.MotionMagicAcceleration = 800; // Target acceleration of 400 rps/s (0.25 seconds to max)
     motionMagicConfigsBottomR.MotionMagicJerk = 0; 
     
     //actually the motors

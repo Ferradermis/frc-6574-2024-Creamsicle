@@ -19,14 +19,14 @@ public class ShootFromShortDistance extends Command{
   @Override
   public void initialize() {
     SmartDashboard.putNumber("Shooter start", Timer.getFPGATimestamp());
-    RobotContainer.shooter.setShooterVelocityUsingMotionMagic(75);
+    RobotContainer.shooter.setShooterVelocityUsingMotionMagic(60);
   }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
     SmartDashboard.putNumber("Shooter end", Timer.getFPGATimestamp());
-    if (RobotContainer.shooter.getVelocity() >= 70){
+    if (RobotContainer.shooter.getVelocity() >= 60){
       RobotContainer.intake.disableIntakeLimitSwitch();
       RobotContainer.intake.setIntakeSpeed(0, -1, 1);
     }
