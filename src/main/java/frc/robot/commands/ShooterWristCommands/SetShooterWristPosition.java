@@ -14,8 +14,8 @@ public class SetShooterWristPosition extends Command {
   private double position;
   private double tolerance = 0.05;
   
-  public SetShooterWristPosition(double position) {
-    this.position = position;
+  public SetShooterWristPosition(double pos) {
+    position = pos;
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(RobotContainer.shooterW);
 
@@ -25,7 +25,7 @@ public class SetShooterWristPosition extends Command {
   @Override
   public void initialize() {
     System.out.println("Beginning SetWristPosition");
-    //RobotContainer.shooterW.setPosition(position);
+    RobotContainer.shooterW.setPosition(position);
   }
 
   // Called every time the scheduler runs while the command is scheduled.
@@ -37,7 +37,7 @@ public class SetShooterWristPosition extends Command {
   // Called once the command ends or is interrupted.
   @Override
   public void end(boolean interrupted) {
-    //RobotContainer.wrist.stop();
+    //RobotContainer.shooterW.stop();
   }
 
   // Returns true when the command should end.

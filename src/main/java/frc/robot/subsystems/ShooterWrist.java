@@ -5,6 +5,7 @@
 package frc.robot.subsystems;
 
 import com.revrobotics.CANSparkMax;
+import com.revrobotics.REVLibError;
 import com.revrobotics.CANSparkBase.IdleMode;
 import com.revrobotics.CANSparkLowLevel.MotorType;
 import com.revrobotics.CANSparkLowLevel.PeriodicFrame;
@@ -46,11 +47,11 @@ public class ShooterWrist extends SubsystemBase {
 
     shooterWristMotor.setSmartCurrentLimit(45);
 
-    kP = 1.26; // 7 8
+    kP = 20; //some high number to see if the wrist is even working - have tried high + low numbers
     kI = 0;
-    kD = 1.3;
+    kD = 0;
     kIz = 0;
-    kFF = 0.2;
+    kFF = 0;
     kMaxOutput = .5;
     kMinOutput = -.5;
 
@@ -86,6 +87,7 @@ public class ShooterWrist extends SubsystemBase {
 
   public void setPosition(double position) {
     shooterWristPIDController.setReference(position, CANSparkMax.ControlType.kPosition);
+    //System.out.println(shooterWristPIDController.setReference(position, CANSparkMax.ControlType.kPosition));
   }
 
   public double getPosition() {

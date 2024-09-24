@@ -145,7 +145,7 @@ public class RobotContainer {
     // m_driverController.b().whileTrue(new AdjustAndShootSubwoofer());
     m_driverController.leftTrigger().whileTrue(new OutakeNote());
     m_driverController.rightTrigger().onTrue(new ReturnHomeAndIntake());
-    m_driverController.b().whileTrue(new SetShooterWristPosition(2));
+    m_driverController.b().onTrue(new SetShooterWristPosition(3));
     m_driverController.rightBumper().whileTrue(new AdjustAndShootShortDistance());
     m_driverController.rightBumper().whileFalse(new RunCommand(() -> shooter.setShooterSpeed(0), shooter));
     m_driverController.leftBumper().whileTrue(new RunCommand(() -> shooter.setShooterSpeed(1), shooter));
