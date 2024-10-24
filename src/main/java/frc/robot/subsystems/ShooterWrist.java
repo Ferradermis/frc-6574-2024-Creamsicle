@@ -62,9 +62,9 @@ public class ShooterWrist extends SubsystemBase {
     shooterWristPIDController.setFF(kFF);
     shooterWristPIDController.setOutputRange(kMinOutput, kMaxOutput);
 
-    shooterWristPIDController.setPositionPIDWrappingEnabled(true);
-    shooterWristPIDController.setPositionPIDWrappingMinInput(0);
-    shooterWristPIDController.setPositionPIDWrappingMaxInput(1);
+    shooterWristPIDController.setPositionPIDWrappingEnabled(false);
+    // shooterWristPIDController.setPositionPIDWrappingMinInput(0);
+    // shooterWristPIDController.setPositionPIDWrappingMaxInput(1);
   }
 
   @Override

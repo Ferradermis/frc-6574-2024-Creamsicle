@@ -14,8 +14,8 @@ public class SetShooterWristPosition extends Command {
   private double position;
   private double tolerance = 0.05;
   
-  public SetShooterWristPosition(double pos) {
-    position = pos;
+  public SetShooterWristPosition(double position) {
+    this.position = position;
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(RobotContainer.shooterW);
 
@@ -37,7 +37,7 @@ public class SetShooterWristPosition extends Command {
   // Called once the command ends or is interrupted.
   @Override
   public void end(boolean interrupted) {
-    //RobotContainer.shooterW.stop();
+    //RobotContainer.wrist.stop();
   }
 
   // Returns true when the command should end.
