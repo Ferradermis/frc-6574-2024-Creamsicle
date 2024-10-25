@@ -47,7 +47,7 @@ public class ShooterWrist extends SubsystemBase {
 
     shooterWristMotor.setSmartCurrentLimit(45);
 
-    kP = 20; //some high number to see if the wrist is even working - have tried high + low numbers
+    kP = 2.5; //some high number to see if the wrist is even working - have tried high + low numbers
     kI = 0;
     kD = 0;
     kIz = 0;
@@ -70,8 +70,8 @@ public class ShooterWrist extends SubsystemBase {
   @Override
 
   public void periodic() {
-    // double position = limelightGetShooterAngle();
-    // SmartDashboard.putNumber("limelight shooter", position);
+    double position = limelightGetShooterAngle();
+    SmartDashboard.putNumber("limelight shooter", position);
     SmartDashboard.putNumber("Wrist Encoder", getPosition());
   }
 
@@ -97,9 +97,9 @@ public class ShooterWrist extends SubsystemBase {
   // Method to adjust our shooter wrist angle based on distance from speaker
   // Returns the encoder value to set the position of the wrist
   // //TODO: Redo this equation
-  // public double limelightGetShooterAngle() {
-  //   double distance = RobotContainer.limelight.getDistanceToTarget();
-  //   return (6.83518/(distance + 42.3178)) + 0.161171;
-  // }
+  public double limelightGetShooterAngle() {
+    double distance = RobotContainer.limelight.getDistanceToTarget();
+    return (161.249/(distance - 98.8901)) + 6.69599;
+  }
 }
 

@@ -89,34 +89,41 @@ public class Shooter extends SubsystemBase {
     var motionMagicConfigsBottomL = shooterVelocityFxConfigurationBottomL.MotionMagic;
     var motionMagicConfigsTopR = shooterVelocityFxConfigurationTopR.MotionMagic;
     var motionMagicConfigsBottomR = shooterVelocityFxConfigurationBottomR.MotionMagic;
-    motionMagicConfigsTopL.MotionMagicAcceleration = 800; // Target acceleration of 400 rps/s (0.25 seconds to max)
-    motionMagicConfigsTopL.MotionMagicJerk = 0; //16000 
-    motionMagicConfigsBottomL.MotionMagicAcceleration = 800; // Target acceleration of 400 rps/s (0.25 seconds to max)
-    motionMagicConfigsBottomL.MotionMagicJerk = 0; //16000 
-    motionMagicConfigsTopR.MotionMagicAcceleration = 800; // Target acceleration of 400 rps/s (0.25 seconds to max)
-    motionMagicConfigsTopR.MotionMagicJerk = 0; 
-    motionMagicConfigsBottomR.MotionMagicAcceleration = 800; // Target acceleration of 400 rps/s (0.25 seconds to max)
-    motionMagicConfigsBottomR.MotionMagicJerk = 0; 
+    // motionMagicConfigsTopL.MotionMagicAcceleration = 800; // Target acceleration of 400 rps/s (0.25 seconds to max)
+    // motionMagicConfigsTopL.MotionMagicJerk = 0; //16000 
+    // motionMagicConfigsBottomL.MotionMagicAcceleration = 800; // Target acceleration of 400 rps/s (0.25 seconds to max)
+    // motionMagicConfigsBottomL.MotionMagicJerk = 0; //16000 
+    // motionMagicConfigsTopR.MotionMagicAcceleration = 800; // Target acceleration of 400 rps/s (0.25 seconds to max)
+    // motionMagicConfigsTopR.MotionMagicJerk = 0; 
+    // motionMagicConfigsBottomR.MotionMagicAcceleration = 800; // Target acceleration of 400 rps/s (0.25 seconds to max)
+    // motionMagicConfigsBottomR.MotionMagicJerk = 0; 
     
     //actually the motors
     kShooterTopLeft = new TalonFX(Constants.RobotConstants.shooterTopLeftCANID);
     kShooterTopLeft.getConfigurator().apply(shooterVelocityFxConfigurationTopL);
     kShooterTopLeft.setNeutralMode(NeutralModeValue.Coast);
     kShooterTopLeft.setInverted(true);
+    kShooterTopLeft.getConfigurator().apply(currentLimitConfig.withStatorCurrentLimit(90));
+    kShooterTopLeft.getConfigurator().apply(currentLimitConfig.withSupplyCurrentLimit(50));
 
     kShooterBottomLeft = new TalonFX(Constants.RobotConstants.shooterBottomLeftCANID);
     kShooterBottomLeft.getConfigurator().apply(shooterVelocityFxConfigurationBottomL);
     kShooterBottomLeft.setNeutralMode(NeutralModeValue.Coast);
+    kShooterBottomLeft.getConfigurator().apply(currentLimitConfig.withStatorCurrentLimit(90));
+    kShooterBottomLeft.getConfigurator().apply(currentLimitConfig.withSupplyCurrentLimit(50));
 
     kShooterTopRight = new TalonFX(Constants.RobotConstants.shooterTopRightCANID);
     kShooterTopRight.getConfigurator().apply(shooterVelocityFxConfigurationTopR);
     kShooterTopRight.setNeutralMode(NeutralModeValue.Coast);
+    kShooterTopRight.getConfigurator().apply(currentLimitConfig.withStatorCurrentLimit(90));
+    kShooterTopRight.getConfigurator().apply(currentLimitConfig.withSupplyCurrentLimit(50));
     
     kShooterBottomRight = new TalonFX(Constants.RobotConstants.shooterBottomRightCANID);
     kShooterBottomRight.getConfigurator().apply(shooterVelocityFxConfigurationBottomR);
     kShooterBottomRight.setNeutralMode(NeutralModeValue.Coast);
     kShooterBottomRight.setInverted(true);
-
+    kShooterBottomRight.getConfigurator().apply(currentLimitConfig.withStatorCurrentLimit(90));
+    kShooterBottomRight.getConfigurator().apply(currentLimitConfig.withSupplyCurrentLimit(50));
   }
 
   @Override

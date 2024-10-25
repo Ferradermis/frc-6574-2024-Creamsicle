@@ -28,8 +28,7 @@ public class AutoAdjustAndStartShooter extends Command{
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    //position = RobotContainer.shooterW.limelightGetShooterAngle();
-    position = 0;
+    position = RobotContainer.shooterW.limelightGetShooterAngle();
     RobotContainer.intake.setIntakeSpeed(0, -0.1, 0);
     RobotContainer.shooterW.setPosition(position);
     

@@ -17,7 +17,7 @@ public class ReturnToHome extends SequentialCommandGroup {
     // addCommands(new FooCommand(), new BarCommand());
     addCommands(
       new ParallelCommandGroup(
-        new SetShooterWristPosition(0.257)
+        new SetShooterWristPosition(0)
       )
     );
   }

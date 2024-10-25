@@ -19,7 +19,7 @@ public class ShootFromShortDistance extends Command{
   @Override
   public void initialize() {
     SmartDashboard.putNumber("Shooter start", Timer.getFPGATimestamp());
-    RobotContainer.shooter.setShooterVelocityUsingMotionMagic(60);
+    RobotContainer.shooter.setShooterVelocityUsingMotionMagic(70);
   }
 
   // Called every time the scheduler runs while the command is scheduled.

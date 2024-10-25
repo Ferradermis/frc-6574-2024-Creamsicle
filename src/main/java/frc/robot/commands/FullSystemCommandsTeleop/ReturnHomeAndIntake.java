@@ -7,6 +7,7 @@ import frc.robot.commands.IntakeNote;
 public class ReturnHomeAndIntake extends SequentialCommandGroup{
     public ReturnHomeAndIntake(){
         addCommands(new ParallelCommandGroup(
-        new IntakeNote()));
+            new ReturnToHome(),
+            new IntakeNote()));
     }
 }
