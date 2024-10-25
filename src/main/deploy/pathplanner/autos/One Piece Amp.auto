@@ -2,10 +2,10 @@
   "version": 1.0,
   "startingPose": {
     "position": {
-      "x": 0.5645260933888472,
-      "y": 2.4241431649767726
+      "x": 0.78,
+      "y": 6.7
     },
-    "rotation": 0
+    "rotation": 59.95320738979852
   },
   "command": {
     "type": "sequential",
@@ -14,12 +14,12 @@
         {
           "type": "path",
           "data": {
-            "pathName": "Drive Back"
+            "pathName": "Test One Piece Amp"
           }
         }
       ]
     }
   },
-  "folder": "Pathplanner Autos",
-  "choreoAuto": false
+  "folder": null,
+  "choreoAuto": true
 }
